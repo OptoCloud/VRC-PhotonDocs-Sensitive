@@ -1,6 +1,22 @@
 # UnreliableSerialization (Event 7)
 
 
+Table:
+```cpp
+struct PhotonPacket {
+	std::int32_t viewId;
+	std::int32_t serverTime;
+  std::uint8_t fbsMainTablePtr;
+  std::uint8_t fbsMainVTableSize;
+  std::uint8_t fbsMainTableSize;
+  std::uint8_t fbsVTableEntries[fbsMainVTableSize - 2];
+  std::uint8_t fbsMainVTableReversePtr;
+  std::uint8_t fbsVectorPtr;
+  std::uint8_t fbsVectorLen;
+  std::uint8_t fbsVectorEntries[fbsVectorLen];
+};
+```
+
 7 wizard bytes:
 ```cpp
 05 // points to main table (including self)
