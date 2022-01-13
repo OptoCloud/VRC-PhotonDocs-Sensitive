@@ -4,8 +4,8 @@
 Table:
 ```cpp
 struct PhotonPacket {
-	std::int32_t viewId;
-	std::int32_t serverTime;
+  std::int32_t viewId;
+  std::int32_t serverTime;
   std::uint8_t fbsMainTablePtr;
   std::uint8_t fbsMainVTableSize;
   std::uint8_t fbsMainTableSize;
