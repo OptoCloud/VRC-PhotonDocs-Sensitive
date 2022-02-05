@@ -51,6 +51,7 @@ struct FbsVectorEntry {
 	} else if (GetCurrVecIndex() == 3) {
 		std::print("\t\t\t\tPlayerNet");
 		VRChat::PlayerNet playerNet [[inline]];
+		VRChat::Print(playerNet);
 	}
 	IncCurrVecIndex();
 };
