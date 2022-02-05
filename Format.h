@@ -70,19 +70,6 @@ struct VRC_AvatarParameters {
     u8 channelMask; // Bitfield of what channels are active
 };
 
-struct PhotonPacket {
-	s32 viewId;
-	s32 serverTime;
-	padding[2];
-	u8 bunchCount;
-	u8 bunchId;
-	padding[3];
-	u8 vTableSize;
-	u8 vTable[vTableSize];
-};
-
-PhotonPacket packet @ 0x00;
-
 VRC_SyncPhysics syncPhysics[2] @  0x14;
 VRC_PlayerNet playerNet @ 0x44;
 u8 unknown1[12] @ 0x49;
