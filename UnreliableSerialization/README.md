@@ -1,5 +1,7 @@
 # UnreliableSerialization (Event 7)
 
+Official fbs docs:
+http://google.github.io/flatbuffers/flatbuffers_internals.html
 
 Table:
 ```cpp
