@@ -71,12 +71,12 @@ struct FbsTableEntry {
 
 struct FbsTableEntryPtr {
 	std::print("\tEntry {}:", GetCurrTableEntry());
-	if (std::mem::read_unsigned($, 1) != 0)
+	u8 offset;
+	if (offset != 0)
 	{
-		padding[std::mem::read_unsigned($, 1)];
-		FbsTableEntry entry [[inline]];
+		padding[std::mem::read_unsigned($ - 1, 1) - 1];
+		FbsTableEntry data;
 	} else {
-		u8 nullptr;
 		std::print("\t\tNull");
 	}
 	IncCurrTableEntry();
