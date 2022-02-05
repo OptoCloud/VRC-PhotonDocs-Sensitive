@@ -40,8 +40,8 @@ fn ResetCurrTableEntry() {
 struct FbsVectorEntry {
 	std::print("\t\t\tIndex {}:", GetCurrVecIndex());
 	if (GetCurrVecIndex() == 0) {
-		std::print("\t\t\t\tSyncPhysics");
-		VRChat::SyncPhysics syncPhysics [[inline]];
+		std::print("\t\t\t\tVECTOR!");
+		u8 unknown[6];
 	} else if (GetCurrVecIndex() == 1) {
 		std::print("\t\t\t\tSyncPhysics");
 		VRChat::SyncPhysics syncPhysics [[inline]];
@@ -49,7 +49,7 @@ struct FbsVectorEntry {
 		std::print("\t\t\t\tSyncPhysics");
 		VRChat::SyncPhysics syncPhysics [[inline]];
 	} else if (GetCurrVecIndex() == 3) {
-		std::print("\t\t\t\tSyncPhysics");
+		std::print("\t\t\t\tPlayerNet");
 		VRChat::PlayerNet playerNet [[inline]];
 	}
 	IncCurrVecIndex();
